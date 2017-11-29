@@ -1,0 +1,21 @@
+import {Navigation} from 'react-native-navigation';
+import {registerScreens} from './src/screens';
+
+registerScreens();
+
+Navigation.startTabBasedApp({
+  tabs: [
+    {
+      label: 'Signin',
+      screen: 'page.Signin',
+      icon: require('./src/images/icons/unlocked.png'),
+      title: 'Signin'
+    },
+    {
+      label: 'Home',
+      screen: 'page.Home',
+      icon: require('./src/images/icons/home.png'),
+      title: 'Home'
+    }
+  ]
+});
